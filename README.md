@@ -1,6 +1,6 @@
 # OSRS Guide
 
-A comprehensive resource for leveling and end-game preparation in **Old School RuneScape (OSRS)**. This repository hosts the original "OSRS Max Level and End-Game Preparation Guide" PDF and a simple static website that highlights the material in web form. It also serves as the base for future improvements such as interactive calculators and more detailed training breakdowns.
+A comprehensive resource for leveling and end-game preparation in **Old School RuneScape (OSRS)**. This repository hosts the original "OSRS Max Level and End-Game Preparation Guide" PDF and a static website that highlights the material in web form. The site now includes a basic experience calculator and persistent checklists. It also serves as the base for future improvements such as more advanced interactive tools and detailed training breakdowns.
 
 ## Contents
 
@@ -91,7 +91,7 @@ Future iterations might introduce a build step or tooling (such as a static site
 ## Roadmap
 
 - **Polished Website** – Expand `site/` with a consistent design language, responsive layout, and more detailed content extracted from the PDF.
-- **Interactive Tools** – Add calculators for experience tracking, gear checklists, and quest requirements.
+- **Interactive Tools** – Basic experience calculator and persistent checklists are now included on the site; future updates will expand these tools.
 - **Testing Setup** – Integrate automated linting or HTML validation for quality assurance.
 - **Contribution Guide** – Provide guidelines and templates for external contributions as the project grows.
 

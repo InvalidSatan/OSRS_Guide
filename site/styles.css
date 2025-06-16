@@ -44,3 +44,15 @@ main {
 section {
     margin-bottom: 40px;
 }
+
+#xp-tool label,
+#xp-tool button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#gear-tool ul,
+#quest-tool ul {
+    list-style: none;
+    padding-left: 0;
+}

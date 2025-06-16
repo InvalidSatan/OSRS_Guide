@@ -16,6 +16,7 @@
                 <li><a href="#noncombat">Non-Combat Skills</a></li>
                 <li><a href="#quests">Quests</a></li>
                 <li><a href="#endgame">End-Game</a></li>
+                <li><a href="#tools">Tools</a></li>
             </ul>
         </nav>
     </header>
@@ -39,6 +40,39 @@
         <section id="endgame">
             <h2>End-Game Preparation</h2>
             <p>With maxed combat and skilling, you'll be ready to farm bosses for valuable drops. High-level gear, prayers, and efficient training allow you to take on OSRS's toughest challenges.</p>
+        </section>
+        <section id="tools">
+            <h2>Interactive Tools</h2>
+
+            <div id="xp-tool">
+                <h3>Experience Calculator</h3>
+                <label>Current XP:
+                    <input type="number" id="current-xp" min="0">
+                </label>
+                <label>Target Level:
+                    <input type="number" id="target-level" min="1" max="99">
+                </label>
+                <button id="calc-xp">Calculate XP Needed</button>
+                <p id="xp-result"></p>
+            </div>
+
+            <div id="gear-tool">
+                <h3>Gear Checklist</h3>
+                <ul>
+                    <li><label><input type="checkbox" data-storage-key="gear-firecape"> Fire Cape</label></li>
+                    <li><label><input type="checkbox" data-storage-key="gear-barrowsgloves"> Barrows Gloves</label></li>
+                    <li><label><input type="checkbox" data-storage-key="gear-ava"> Ava's Assembler</label></li>
+                </ul>
+            </div>
+
+            <div id="quest-tool">
+                <h3>Quest Requirements</h3>
+                <ul>
+                    <li><label><input type="checkbox" data-storage-key="quest-waterfall"> Waterfall Quest</label></li>
+                    <li><label><input type="checkbox" data-storage-key="quest-recipe"> Recipe for Disaster</label></li>
+                    <li><label><input type="checkbox" data-storage-key="quest-desert"> Desert Treasure I</label></li>
+                </ul>
+            </div>
         </section>
     </main>
     <script src="script.js"></script>
