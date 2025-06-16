@@ -99,12 +99,12 @@ Future iterations might introduce a build step or tooling (such as a static site
 
 - **Polished Website** – Expand `site/` with a consistent design language, responsive layout, and more detailed content extracted from the PDF.
 - **Interactive Tools** – Add calculators for experience tracking, gear checklists, and quest requirements.
-- **Testing Setup** – Basic HTML linting via `./scripts/validate_html.sh`.
-- **Contribution Guide** – Provide guidelines and templates for external contributions as the project grows.
+- **Testing Setup** – Integrate automated linting or HTML validation for quality assurance.
+- **Contribution Guide** – Provide guidelines and templates for external contributions in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Contributing
 
-Contributions are welcome! Please follow these general steps:
+Contributions are welcome! Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines. In short, follow these general steps:
 
 1. Fork the repository and create a feature branch.
 2. Make your changes following the [Development Workflow](#development-workflow).
