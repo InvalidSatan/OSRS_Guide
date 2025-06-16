@@ -1,6 +1,6 @@
 # OSRS Guide
 
-A comprehensive resource for leveling and end-game preparation in **Old School RuneScape (OSRS)**. This repository hosts the original "OSRS Max Level and End-Game Preparation Guide" PDF and a simple static website that highlights the material in web form. It also serves as the base for future improvements such as interactive calculators and more detailed training breakdowns.
+A comprehensive resource for leveling and end-game preparation in **Old School RuneScape (OSRS)**. This repository hosts the original "OSRS Max Level and End-Game Preparation Guide" PDF and a static website that highlights the material in web form. The site now includes a basic experience calculator and persistent checklists. It also serves as the base for future improvements such as more advanced interactive tools and detailed training breakdowns.
 
 ## Contents
 
@@ -38,7 +38,7 @@ The `site` directory is a static HTML/CSS/JS implementation. Opening `index.html
 
 ## Quick Start
 
-The project does not require any special dependencies. To view the website locally, you can simply open the `site/index.html` file in your browser. For convenience, you can also run a lightweight HTTP server:
+The project requires only minimal tooling. To view the website locally, simply open `site/index.html` in your browser. You can optionally run a lightweight HTTP server:
 
 ```bash
 # From the repository root
@@ -47,6 +47,13 @@ python3 -m http.server 8000
 ```
 
 Then navigate to <http://localhost:8000> in your web browser.
+
+If you would like to validate the HTML, install `tidy` and run the helper script:
+
+```bash
+sudo apt-get install tidy  # once per environment
+./scripts/validate_html.sh
+```
 
 The PDF can be viewed directly using any PDF reader or in most browsers.
 
@@ -66,7 +73,7 @@ The PDF can be viewed directly using any PDF reader or in most browsers.
    - Keep commits focused and descriptive.
 4. **Test locally**
    - Open `site/index.html` to verify layout and content.
-   - Consider validating HTML and CSS for best practices.
+   - Run `./scripts/validate_html.sh` to ensure the HTML passes linting.
 5. **Commit and push**
    ```bash
    git add .
@@ -91,17 +98,17 @@ Future iterations might introduce a build step or tooling (such as a static site
 ## Roadmap
 
 - **Polished Website** – Expand `site/` with a consistent design language, responsive layout, and more detailed content extracted from the PDF.
-- **Interactive Tools** – Add calculators for experience tracking, gear checklists, and quest requirements.
+- **Interactive Tools** – Basic experience calculator and persistent checklists are now included on the site; future updates will expand these tools.
 - **Testing Setup** – Integrate automated linting or HTML validation for quality assurance.
-- **Contribution Guide** – Provide guidelines and templates for external contributions as the project grows.
 - **User Accounts & Progress Tracking** – Implement authentication and cloud storage so players can save skill levels, quest completion, and gear setups across devices.
 - **Live Data Integration** – Sync calculators with OSRS APIs for real-time item prices, experience tables, and high-score statistics.
 - **Dynamic Training Planner** – Provide an interactive interface that schedules skill goals and quest order based on user preferences.
 - **Community Features** – Introduce comment sections or discussion boards so players can share tips and feedback.
+- **Contribution Guide** – Provide guidelines and templates for external contributions in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Contributing
 
-Contributions are welcome! Please follow these general steps:
+Contributions are welcome! Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines. In short, follow these general steps:
 
 1. Fork the repository and create a feature branch.
 2. Make your changes following the [Development Workflow](#development-workflow).
