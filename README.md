@@ -94,6 +94,10 @@ Future iterations might introduce a build step or tooling (such as a static site
 - **Interactive Tools** – Add calculators for experience tracking, gear checklists, and quest requirements.
 - **Testing Setup** – Integrate automated linting or HTML validation for quality assurance.
 - **Contribution Guide** – Provide guidelines and templates for external contributions as the project grows.
+- **User Accounts & Progress Tracking** – Implement authentication and cloud storage so players can save skill levels, quest completion, and gear setups across devices.
+- **Live Data Integration** – Sync calculators with OSRS APIs for real-time item prices, experience tables, and high-score statistics.
+- **Dynamic Training Planner** – Provide an interactive interface that schedules skill goals and quest order based on user preferences.
+- **Community Features** – Introduce comment sections or discussion boards so players can share tips and feedback.
 
 ## Contributing
 
