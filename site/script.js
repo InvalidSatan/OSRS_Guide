@@ -5,6 +5,10 @@ links.forEach(link => {
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
         target.scrollIntoView({ behavior: 'smooth' });
+        const navList = document.querySelector('nav ul');
+        if (navList.classList.contains('show')) {
+            navList.classList.remove('show');
+        }
     });
 });
 

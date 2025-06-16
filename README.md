@@ -38,7 +38,7 @@ The `site` directory is a static HTML/CSS/JS implementation. Opening `index.html
 
 ## Quick Start
 
-The project does not require any special dependencies. To view the website locally, you can simply open the `site/index.html` file in your browser. For convenience, you can also run a lightweight HTTP server:
+The project requires only minimal tooling. To view the website locally, simply open `site/index.html` in your browser. You can optionally run a lightweight HTTP server:
 
 ```bash
 # From the repository root
@@ -47,6 +47,13 @@ python3 -m http.server 8000
 ```
 
 Then navigate to <http://localhost:8000> in your web browser.
+
+If you would like to validate the HTML, install `tidy` and run the helper script:
+
+```bash
+sudo apt-get install tidy  # once per environment
+./scripts/validate_html.sh
+```
 
 The PDF can be viewed directly using any PDF reader or in most browsers.
 
@@ -66,7 +73,7 @@ The PDF can be viewed directly using any PDF reader or in most browsers.
    - Keep commits focused and descriptive.
 4. **Test locally**
    - Open `site/index.html` to verify layout and content.
-   - Consider validating HTML and CSS for best practices.
+   - Run `./scripts/validate_html.sh` to ensure the HTML passes linting.
 5. **Commit and push**
    ```bash
    git add .
@@ -93,11 +100,11 @@ Future iterations might introduce a build step or tooling (such as a static site
 - **Polished Website** – Expand `site/` with a consistent design language, responsive layout, and more detailed content extracted from the PDF.
 - **Interactive Tools** – Basic experience calculator and persistent checklists are now included on the site; future updates will expand these tools.
 - **Testing Setup** – Integrate automated linting or HTML validation for quality assurance.
-- **Contribution Guide** – Provide guidelines and templates for external contributions as the project grows.
+- **Contribution Guide** – Provide guidelines and templates for external contributions in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Contributing
 
-Contributions are welcome! Please follow these general steps:
+Contributions are welcome! Refer to [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines. In short, follow these general steps:
 
 1. Fork the repository and create a feature branch.
 2. Make your changes following the [Development Workflow](#development-workflow).
