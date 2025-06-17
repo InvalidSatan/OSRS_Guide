@@ -749,6 +749,16 @@
                         return this.getCalculatorsContent();
                     case 'quest-guide':
                         return this.getQuestGuideContent();
+                    case 'slayer-guide':
+                        return this.getSlayerGuideContent();
+                    case 'achievement-diaries':
+                        return this.getAchievementDiariesContent();
+                    case 'raids':
+                        return this.getRaidsContent();
+                    case 'money-making':
+                        return this.getMoneyMakingContent();
+                    case 'trackers':
+                        return this.getTrackersContent();
                     default:
                         return this.getDashboardContent();
                 }
@@ -1611,6 +1621,94 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">⛏️ Mining</h3>
+                                <span class="card-badge">AFK-Friendly</span>
+                            </div>
+
+                            <h4>Level 1-30: Quest Start</h4>
+                            <ul>
+                                <li><strong>Doric's Quest:</strong> 1,300 XP</li>
+                                <li><strong>The Dig Site:</strong> 15,300 XP</li>
+                            </ul>
+
+                            <h4>Level 30-70: Motherlode Mine</h4>
+                            <div class="equipment-recommendation">
+                                <h4>🎯 Recommended Equipment</h4>
+                                <p><strong>Pickaxe:</strong> Dragon pickaxe if possible<br>
+                                <strong>Outfit:</strong> Prospector for bonus XP<br>
+                                <strong>Profit:</strong> Gold nuggets for pay-dirt sacks</p>
+                            </div>
+                            <ul>
+                                <li><strong>XP Rate:</strong> 25-45K XP/hr</li>
+                                <li><strong>Goal:</strong> Full Prospector (180 nuggets)</li>
+                            </ul>
+
+                            <h4>Level 70-99: Blast Mine / 3-tick Granite</h4>
+                            <ul>
+                                <li><strong>Blast Mine:</strong> 65K XP/hr + profit</li>
+                                <li><strong>3-tick Granite:</strong> 90K+ XP/hr</li>
+                                <li><strong>Amethyst:</strong> 20K XP/hr but good gp</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">⚒️ Smithing</h3>
+                                <span class="card-badge">Costly</span>
+                            </div>
+
+                            <h4>Level 1-40: Quest Boost</h4>
+                            <ul>
+                                <li><strong>The Knight's Sword:</strong> 12,725 XP</li>
+                                <li><strong>Elemental Workshop I:</strong> 5,000 XP</li>
+                            </ul>
+
+                            <h4>Level 40-70: Steel/Iron Items</h4>
+                            <div class="equipment-recommendation">
+                                <h4>🎯 Efficient Training</h4>
+                                <p><strong>Method:</strong> Blast Furnace steel bars<br>
+                                <strong>Cost:</strong> Moderate, profit possible with coal bag</p>
+                            </div>
+                            <ul>
+                                <li><strong>XP Rate:</strong> 80K XP/hr</li>
+                            </ul>
+
+                            <h4>Level 70-99: Gold Bars or Blast Furnace</h4>
+                            <ul>
+                                <li><strong>Gold Bars with Gauntlets:</strong> 130K XP/hr</li>
+                                <li><strong>Blast Furnace Rune Items:</strong> 250K XP/hr (very expensive)</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">🎣 Fishing</h3>
+                                <span class="card-badge">Chill</span>
+                            </div>
+
+                            <h4>Level 1-20: Shrimp & Anchovies</h4>
+                            <ul>
+                                <li>Draynor Village or Lumbridge Swamp</li>
+                            </ul>
+
+                            <h4>Level 20-70: Fly Fishing</h4>
+                            <div class="equipment-recommendation">
+                                <h4>🎯 Recommended Gear</h4>
+                                <p>Use feathers with a fly fishing rod in Barbarian Village<br>
+                                Bank trout and salmon for early cooking levels</p>
+                            </div>
+                            <ul>
+                                <li><strong>XP Rate:</strong> 30-50K XP/hr</li>
+                            </ul>
+
+                            <h4>Level 70-99: Barbarian Fishing or Sharks</h4>
+                            <ul>
+                                <li><strong>Barbarian Fishing:</strong> 70K XP/hr plus Strength & Agility XP</li>
+                                <li><strong>Sharks:</strong> 20K XP/hr but profitable</li>
+                            </ul>
+                        </div>
                     </div>
                 `;
             }
@@ -2006,7 +2104,81 @@
                                     <li><strong>XP Rewards:</strong> 18,000 Smithing, 15,000 Magic</li>
                                 </ul>
                             </div>
+                </div>
+            </div>
+        `;
+            }
+
+            getSlayerGuideContent() {
+                return `
+                    <div class="page-header">
+                        <h1 class="page-title">Slayer Guide</h1>
+                        <p class="page-subtitle">Strategies for efficient slayer training are coming soon.</p>
+                    </div>
+                    <p>Content under construction.</p>
+                `;
+            }
+
+            getAchievementDiariesContent() {
+                return `
+                    <div class="page-header">
+                        <h1 class="page-title">Achievement Diaries</h1>
+                        <p class="page-subtitle">A checklist of diary tasks for all regions.</p>
+                    </div>
+                    <p>Content under construction.</p>
+                `;
+            }
+
+            getRaidsContent() {
+                return `
+                    <div class="page-header">
+                        <h1 class="page-title">Raids Guide</h1>
+                        <p class="page-subtitle">Detailed raid strategies coming soon.</p>
+                    </div>
+                    <p>Content under construction.</p>
+                `;
+            }
+
+            getMoneyMakingContent() {
+                return `
+                    <div class="page-header">
+                        <h1 class="page-title">Money Making</h1>
+                        <p class="page-subtitle">Profitable methods will be added soon.</p>
+                    </div>
+                    <p>Content under construction.</p>
+                `;
+            }
+
+            getTrackersContent() {
+                return `
+                    <div class="page-header">
+                        <h1 class="page-title">Progress Trackers</h1>
+                        <p class="page-subtitle">Mark tasks complete to track your journey.</p>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span>Overall Progress</span>
+                            <span id="overall-progress">0%</span>
                         </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="overall-progress-bar" style="width:0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="checklist-container">
+                        <label class="checklist-item">
+                            <input type="checkbox" data-task="quest-rfd"> Complete Recipe for Disaster
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" data-task="fire-cape"> Obtain Fire Cape
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" data-task="ds2"> Finish Dragon Slayer II
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" data-task="max-total"> Achieve 2277 total level
+                        </label>
                     </div>
                 `;
             }
