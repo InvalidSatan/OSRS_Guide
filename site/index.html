@@ -48,6 +48,24 @@
                 <li>Use Nightmare Zone or Slayer tasks for efficient high-level training.</li>
                 <li>Unlock Piety via King's Ransom and obtain a Dragon Defender early.</li>
             </ul>
+            <h3>Melee Training</h3>
+            <ul>
+                <li>Quest to 30+ Attack and Strength, then camp Sand or Ammonite Crabs until the 70s.</li>
+                <li>Upgrade to a Dragon scimitar after Monkey Madness I and work toward a Dragon Defender.</li>
+                <li>Dharok's or absorption potions in Nightmare Zone allow extremely AFK training.</li>
+            </ul>
+            <h3>Ranged</h3>
+            <ul>
+                <li>Complete Animal Magnetism by level&nbsp;30 for Ava's device.</li>
+                <li>Train with a cannon on Slayer tasks or safespot at Sand Crabs.</li>
+                <li>Use knives or darts for quick mid-level XP, then swap to broad bolts or chinchompas.</li>
+            </ul>
+            <h3>Magic</h3>
+            <ul>
+                <li>Cast strike spells or use quest rewards for early levels.</li>
+                <li>High Alchemy and teleport spells offer convenient XP while skilling.</li>
+                <li>Bursts and barrages on Slayer tasks give the fastest but costly XP rates.</li>
+            </ul>
         </section>
         <section id="noncombat">
             <h2>Non-Combat Skills</h2>
@@ -57,6 +75,8 @@
                 <li>Thieving: complete Fight Arena and The Feud, then pickpocket Ardougne Knights or blackjack bandits.</li>
                 <li>Prayer: train with dragon bones on a gilded or Chaos altar for fast levels.</li>
                 <li>Crafting and other skills benefit from daily activities like battlestaves and kingdom management.</li>
+                <li>Construction: build oak larders to 74 Construction before switching to dungeon doors.</li>
+                <li>Herblore: use quest rewards to reach 38, then make prayer potions and super sets for profit.</li>
             </ul>
         </section>
         <section id="quests">
@@ -75,6 +95,14 @@
                 <li>Aim for Barrows gear and a Dragon Defender early, then upgrade to Bandos and other high-tier items.</li>
                 <li>Start learning bosses like Barrows, Giant Mole, and King Black Dragon for basic mechanics.</li>
                 <li>Progress to tougher encounters such as Zulrah and Vorkath before tackling raids.</li>
+                <li>Bring high-healing food and prayer potions to extend trips at early bosses.</li>
+                <li>Watch video guides to learn raid mechanics before attempting Chambers of Xeric or Theatre of Blood.</li>
+            </ul>
+            <h3>Boss Strategies</h3>
+            <ul>
+                <li><strong>Barrows:</strong> use protect-from-Melee when entering tunnels and bring a spade plus magic switch gear.</li>
+                <li><strong>Giant Mole:</strong> follow it with a light source and use overhead prayers for safety.</li>
+                <li><strong>Zulrah:</strong> learn the rotation patterns and use range gear with quickswap magic attacks.</li>
             </ul>
         </section>
         <section id="tools">
@@ -109,13 +137,45 @@
                     <li><label><input type="checkbox" data-storage-key="quest-desert"> Desert Treasure I</label></li>
                 </ul>
             </div>
+
+            <div id="prayer-tool">
+                <h3>Prayer Cost Calculator</h3>
+                <label>Current XP:
+                    <input type="number" id="prayer-current" min="0">
+                </label>
+                <label>Target Level:
+                    <input type="number" id="prayer-target" min="1" max="99">
+                </label>
+                <label>XP per bone:
+                    <input type="number" id="xp-per-bone" min="1" value="252">
+                </label>
+                <label>Cost per bone:
+                    <input type="number" id="cost-per-bone" min="1" value="3000">
+                </label>
+                <button id="calc-prayer">Calculate Cost</button>
+                <p id="prayer-result"></p>
+            </div>
+
+            <div id="profit-tool">
+                <h3>Boss Drop Profit</h3>
+                <label>Drop value (GP):
+                    <input type="number" id="drop-value" min="1">
+                </label>
+                <label>Drop rate (1/x):
+                    <input type="number" id="drop-rate" min="1">
+                </label>
+                <label>Kills per hour:
+                    <input type="number" id="kills-per-hour" min="1" value="20">
+                </label>
+                <button id="calc-profit">Calculate Profit</button>
+                <p id="profit-result"></p>
+            </div>
         </section>
         <section id="todo">
             <h2>TODO</h2>
             <ul>
                 <li>Add detailed guides for every skill from the PDF.</li>
-                <li>Integrate prayer cost and bossing loot calculators.</li>
-                <li>Write step-by-step boss strategies.</li>
+                <li>Expand boss strategies with gear setups and inventories.</li>
             </ul>
         </section>
     </main>

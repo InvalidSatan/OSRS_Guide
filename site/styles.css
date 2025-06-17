@@ -77,3 +77,11 @@ section {
     list-style: none;
     padding-left: 0;
 }
+
+#prayer-tool label,
+#prayer-tool button,
+#profit-tool label,
+#profit-tool button {
+    display: block;
+    margin-bottom: 10px;
+}
