@@ -1,16 +1,38 @@
-// Smooth scrolling for anchor links
+// Smooth scrolling for anchor links and responsive menu
 const links = document.querySelectorAll('nav a');
+const navList = document.querySelector('nav ul');
+const navToggle = document.querySelector('.nav-toggle');
 links.forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
         target.scrollIntoView({ behavior: 'smooth' });
-        const navList = document.querySelector('nav ul');
         if (navList.classList.contains('show')) {
             navList.classList.remove('show');
         }
     });
 });
+
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navList.classList.toggle('show');
+    });
+}
+
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+    const stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+        document.body.classList.add('light');
+        themeToggle.textContent = 'Dark Mode';
+    }
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light');
+        const light = document.body.classList.contains('light');
+        localStorage.setItem('theme', light ? 'light' : 'dark');
+        themeToggle.textContent = light ? 'Dark Mode' : 'Light Mode';
+    });
+}
 
 // Experience calculator
 function xpForLevel(level) {
