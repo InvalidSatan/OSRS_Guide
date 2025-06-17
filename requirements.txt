@@ -2,6 +2,7 @@
 # Core web framework (if adding backend functionality)
 flask==3.0.0
 flask-cors==4.0.0
+flask-sqlalchemy==3.0.3
 
 # Static site serving (for development)
 # Use: python -m http.server 8000 (built-in)

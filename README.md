@@ -102,13 +102,17 @@ This workflow keeps the codebase organized as the project evolves.
 
 ## Deployment
 
-The website can be deployed using any static site host (e.g., GitHub Pages, Netlify). The basic approach for GitHub Pages is:
+The site is designed for GitHub Pages. After pushing to `main`, enable Pages in
+the repository settings and select the `site/` folder as the publishing source.
+You can test locally with:
 
-1. Enable GitHub Pages on the repository (Settings → Pages).
-2. Choose the `site/` directory or a dedicated branch as the publishing source.
-3. Commit and push your changes. GitHub will automatically build and publish the site.
+```bash
+pip install -r requirements.txt
+python -m http.server -d site 8000
+```
 
-Future iterations might introduce a build step or tooling (such as a static site generator). At that point the deployment section will be updated accordingly.
+The included CI workflow validates HTML and runs tests on every pull request so
+published pages remain in good shape.
 
 ## Roadmap
 
@@ -135,3 +139,7 @@ For significant features or ideas, feel free to open an issue first to discuss t
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the code and the PDF under the terms of that license.
 
+
+## Legal
+
+Old School RuneScape™ and related names are trademarks of Jagex Ltd. This is a fan-made project and is not affiliated with or endorsed by Jagex.
