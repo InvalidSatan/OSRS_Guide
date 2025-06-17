@@ -1,14 +1,28 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #eee;
+    --header-bg: #1f1f1f;
+    --link-color: #90caf9;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #121212;
-    color: #eee;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.light {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --header-bg: #eeeeee;
+    --link-color: #0069d9;
 }
 
 header {
-    background-color: #1f1f1f;
+    background-color: var(--header-bg);
     padding: 20px;
     text-align: center;
     position: sticky;
@@ -32,9 +46,23 @@ header h1 {
     display: none;
     background: none;
     border: none;
-    color: #eee;
+    color: var(--text-color);
     font-size: 1.5rem;
     margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    .nav-toggle {
+        display: inline;
+    }
 }
 
 nav ul {
@@ -46,7 +74,7 @@ nav ul {
 }
 
 nav a {
-    color: #90caf9;
+    color: var(--link-color);
     text-decoration: none;
     font-weight: bold;
 }
