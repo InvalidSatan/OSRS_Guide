@@ -37,6 +37,46 @@ if (calcBtn) {
     });
 }
 
+// Prayer cost calculator
+const prayerBtn = document.getElementById('calc-prayer');
+if (prayerBtn) {
+    prayerBtn.addEventListener('click', () => {
+        const current = parseInt(document.getElementById('prayer-current').value, 10) || 0;
+        const target = parseInt(document.getElementById('prayer-target').value, 10);
+        const xpPerBone = parseInt(document.getElementById('xp-per-bone').value, 10) || 0;
+        const costPerBone = parseInt(document.getElementById('cost-per-bone').value, 10) || 0;
+        const output = document.getElementById('prayer-result');
+        if (!target || target < 1 || target > 99 || xpPerBone <= 0 || costPerBone <= 0) {
+            output.textContent = 'Enter valid values for levels and bone data.';
+            return;
+        }
+        const targetXp = xpForLevel(target);
+        const neededXp = Math.max(targetXp - current, 0);
+        const bones = Math.ceil(neededXp / xpPerBone);
+        const cost = bones * costPerBone;
+        output.textContent = neededXp > 0 ?
+            `Bones: ${bones.toLocaleString()}, Cost: ${cost.toLocaleString()} gp` :
+            'Target level already achieved!';
+    });
+}
+
+// Boss profit calculator
+const profitBtn = document.getElementById('calc-profit');
+if (profitBtn) {
+    profitBtn.addEventListener('click', () => {
+        const value = parseInt(document.getElementById('drop-value').value, 10) || 0;
+        const rate = parseInt(document.getElementById('drop-rate').value, 10) || 0;
+        const kills = parseInt(document.getElementById('kills-per-hour').value, 10) || 0;
+        const output = document.getElementById('profit-result');
+        if (value <= 0 || rate <= 0 || kills <= 0) {
+            output.textContent = 'Enter valid numbers for drop value, rate, and kills.';
+            return;
+        }
+        const profit = (value / rate) * kills;
+        output.textContent = `Expected profit: ${profit.toLocaleString()} gp/hr`;
+    });
+}
+
 // Persist checklist state
 document.querySelectorAll('[data-storage-key]').forEach(box => {
     const key = box.getAttribute('data-storage-key');
