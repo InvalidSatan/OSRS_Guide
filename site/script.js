@@ -42,6 +42,16 @@ function xpForLevel(level) {
     }
     return Math.floor(points / 4);
 }
+function levelForXp(xp) {
+    for (let level = 1; level <= 99; level++) {
+        if (xpForLevel(level + 1) > xp) {
+            return level;
+        }
+    }
+    return 99;
+}
+window.xpForLevel = xpForLevel;
+window.levelForXp = levelForXp;
 
 const calcBtn = document.getElementById('calc-xp');
 if (calcBtn) {
