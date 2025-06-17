@@ -23,6 +23,9 @@ This project began as a concise PDF with step-by-step instructions for maxing an
 .
 ├── LICENSE                          # MIT license for the project
 ├── README.md                        # This document
+├── requirements.txt                 # Python dependencies for optional tools
+├── scripts/                         # Helper scripts
+│   └── validate_html.sh             # HTML linting helper
 ├── OSRS Max Level and End-Game Preparation Guide.pdf
 └── site/
     ├── index.html                   # Landing page with a summary of the guide
@@ -39,6 +42,14 @@ The `site` directory is a static HTML/CSS/JS implementation. Opening `index.html
 ## Quick Start
 
 The project requires only minimal tooling. To view the website locally, simply open `site/index.html` in your browser. You can optionally run a lightweight HTTP server:
+
+```bash
+pip install -r requirements.txt  # optional, enables helper scripts
+```
+
+This installs development dependencies such as HTML validators.
+
+You can then start a basic server:
 
 ```bash
 # From the repository root
@@ -63,6 +74,10 @@ The PDF can be viewed directly using any PDF reader or in most browsers.
    ```bash
    git clone <repo-url>
    cd OSRS_Guide
+   ```
+   Install Python dependencies if you plan to use the helper scripts:
+   ```bash
+   pip install -r requirements.txt
    ```
 2. **Create a new branch for your changes**
    ```bash
