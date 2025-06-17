@@ -521,6 +521,26 @@
         .tier-btn:hover {
             border-color: var(--primary);
         }
+
+        /* Back to top button */
+        #back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #back-to-top.show {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -2186,7 +2206,21 @@
 
             // Initialize app
             window.osrsApp = new OSRSGuideApp();
+
+            const backToTop = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
         });
-    </script>
+</script>
+
+    <button id="back-to-top" aria-label="Back to top">▲</button>
 </body>
 </html>
